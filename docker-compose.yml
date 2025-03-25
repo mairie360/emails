@@ -87,7 +87,7 @@ services:
       timeout: 5s
       retries: 5
 
-  emails-web:
+  emails:
     build:
       context: .
       dockerfile: Dockerfile

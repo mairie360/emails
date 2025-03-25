@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Emails",
-  description: "The web service for Emails",
+  description: "The Emails's module.",
 };
 
 export default function RootLayout({

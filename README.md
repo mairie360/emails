@@ -1,6 +1,6 @@
-# emails-web
+# emails
 
-The web service for Emails
+The Emails's module.
 
 ## Getting Started
 

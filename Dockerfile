@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 # Set working directory
-WORKDIR /usr/src/emails-web
+WORKDIR /usr/src/emails
 
 # Copy the package files
 COPY package.json package-lock.json ./
@@ -25,10 +25,10 @@ COPY . .
 RUN npm run build
 
 # Create non-root user and group
-RUN groupadd --system emails-web && useradd --no-log-init --system -g emails-web emails-web
+RUN groupadd --system emails && useradd --no-log-init --system -g emails emails
 
 # Set permissions
-USER emails-web
+USER emails
 
 # Set entrypoint
 ENTRYPOINT ["/usr/local/bin/npm"]
